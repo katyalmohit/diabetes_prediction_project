@@ -4,7 +4,7 @@
 This project develops machine learning models to predict diabetes using the PIMA Indians Diabetes Dataset. The implementation compares multiple classification algorithms to identify the most effective approach for early diabetes detection.
 
 ## Dataset
-The PIMA Indians Diabetes Dataset contains medical data from female patients of Pima Indian heritage, with the following features:
+The [PIMA Indians Diabetes Dataset](https://www.kaggle.com/datasets/uciml/pima-indians-diabetes-database) contains medical data from female patients of Pima Indian heritage, with the following features:
 - Pregnancies: Number of times pregnant
 - Glucose: Plasma glucose concentration (2 hours in an oral glucose tolerance test)
 - BloodPressure: Diastolic blood pressure (mm Hg)
