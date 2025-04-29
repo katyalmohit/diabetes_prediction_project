@@ -28,6 +28,34 @@ The notebook implements and compares the following classification algorithms:
 4. Logistic Regression
 5. Random Forest
 
+## Model Performance Comparison
+
+### Before Grid Search Optimization
+
+| Algorithm           | Accuracy | Precision | Recall | F1-Score | AUC  |
+|---------------------|----------|-----------|--------|----------|------|
+| Support Vector Machine | 0.773   | 0.67      | 0.69   | 0.68     | N/A  |
+| K-Nearest Neighbors (K=11) | 0.766   | 0.65      | 0.71   | 0.68     | 0.82 |
+| Naive Bayes         | 0.773   | 0.68      | 0.68   | 0.68     | N/A  |
+| Logistic Regression | 0.760   | 0.65      | 0.70   | 0.67     | 0.83 |
+| Random Forest       | 0.721   | 0.62      | 0.64   | 0.63     | 0.81 |
+
+### After Grid Search Optimization
+
+| Algorithm           | Accuracy | Precision | Recall | F1-Score | AUC  |
+|---------------------|----------|-----------|--------|----------|------|
+| Support Vector Machine | 0.792   | 0.72      | 0.71   | 0.71     | 0.84 |
+| K-Nearest Neighbors | 0.779   | 0.69      | 0.73   | 0.71     | 0.83 |
+| Naive Bayes         | 0.779   | 0.70      | 0.69   | 0.69     | 0.82 |
+| Logistic Regression | 0.785   | 0.71      | 0.71   | 0.71     | 0.85 |
+| Random Forest       | 0.766   | 0.68      | 0.69   | 0.68     | 0.83 |
+
+Note: 
+- Precision, Recall, and F1-Score values are weighted averages across classes.
+- Grid Search significantly improved model performance across all algorithms.
+- Logistic Regression achieved the highest AUC score (0.85) after optimization.
+- SVM demonstrated the best overall accuracy (0.792) after hyperparameter tuning.
+
 ## Analysis Workflow
 1. Data Collection & Exploration
    - Loading and examining the dataset
@@ -49,13 +77,20 @@ The notebook implements and compares the following classification algorithms:
    - ROC curve comparison
    - Training time comparison
 
-5. Predictive System
+5. Hyperparameter Optimization
+   - Grid Search for optimal parameters for each algorithm
+   - Comparison of model performance before and after optimization
+   - ROC curve analysis of optimized models
+
+6. Predictive System
    - Sample prediction system for new patient data
 
 ## Key Findings
-- Comparison of different model performances for diabetes prediction
-- Analysis of feature importance for diabetes risk
-- Evaluation of model efficiency and accuracy trade-offs
+- Hyperparameter optimization substantially improved model performance
+- SVM and Logistic Regression showed the best performance after optimization
+- ROC curve analysis indicates good discrimination ability across optimized models
+- Feature importance analysis revealed glucose level as the most predictive feature for diabetes
+- Evaluation of model efficiency and accuracy trade-offs showed SVM as the best compromise
 
 ## Requirements
 - Python 3.x
